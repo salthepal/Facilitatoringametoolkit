@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search } from 'lucide-react';
+import { Search, Github } from 'lucide-react';
 import { DataUpload } from './components/data-upload';
 import { PatientSearch } from './components/patient-search';
 import { PatientDisplay } from './components/patient-display';
@@ -52,18 +52,33 @@ export default function App() {
         background: 'var(--cc-bg-secondary)', 
         borderBottom: '1px solid rgba(255,255,255,0.1)' 
       }} className="shadow-lg">
-        <div className="max-w-3xl mx-auto px-4 py-2 flex items-center justify-between">
+        <div className="max-w-3xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <div style={{ background: 'linear-gradient(135deg, var(--cc-accent-orange) 0%, var(--cc-accent-red) 100%)' }} 
                  className="w-7 h-7 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0">
               <Search className="w-3.5 h-3.5 text-white" />
             </div>
             <div>
-              <h1 style={{ color: 'var(--cc-text-main)' }} className="text-base leading-none">Facilitator In-Game Toolkit</h1>
+              <div className="flex items-baseline gap-2">
+                <h1 style={{ color: 'var(--cc-text-main)' }} className="text-base leading-none">Facilitator In-Game Toolkit</h1>
+                <span style={{ color: 'var(--cc-text-dim)' }} className="text-xs leading-none">v1.10</span>
+              </div>
             </div>
           </div>
-          <div className="text-right">
-            <p className="text-xs leading-none" style={{ color: 'var(--cc-text-dim)' }}>by <span style={{ color: 'var(--cc-accent-orange)' }}>Sal Phadnis</span></p>
+          <div className="flex items-center gap-3">
+            <div className="text-right">
+              <p className="text-xs leading-none" style={{ color: 'var(--cc-text-dim)' }}>by <span style={{ color: 'var(--cc-accent-orange)' }}>Sal Phadnis</span></p>
+            </div>
+            <a 
+              href="https://github.com/salthepal/Facilitatoringametoolkit" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: 'var(--cc-text-dim)' }}
+              className="hover:text-[var(--cc-accent-orange)] transition-colors"
+              aria-label="View on GitHub"
+            >
+              <Github className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </header>
